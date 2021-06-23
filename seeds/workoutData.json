@@ -1,0 +1,49 @@
+[{
+    "muscletype": "Push",
+    "currentweek": 1,
+    "exercise1": "pushups",
+    "exercise1current": 15,
+    "exercise2": "plank",
+    "exercise2current": 10,
+    "exercise3": "superman",
+    "exercise3current": 5,
+    "exercise4": "situps",
+    "exercise4current": 30,
+    "exercise5": "crunches",
+    "exercise5current": 40
+
+  },
+
+  {
+    "muscletype": "Push",
+    "currentweek": 1,
+    "exercise1": "pushups",
+    "exercise1current": 15,
+    "exercise2": "plank",
+    "exercise2current": 10,
+    "exercise3": "superman",
+    "exercise3current": 5,
+    "exercise4": "situps",
+    "exercise4current": 30,
+    "exercise5": "crunches",
+    "exercise5current": 40
+
+  },
+
+  {
+    "muscletype": "Push",
+    "currentweek": 1,
+    "exercise1": "pushups",
+    "exercise1current": 15,
+    "exercise2": "plank",
+    "exercise2current": 10,
+    "exercise3": "superman",
+    "exercise3current": 5,
+    "exercise4": "situps",
+    "exercise4current": 30,
+    "exercise5": "crunches",
+    "exercise5current": 40
+
+  }
+  
+  ]

@@ -11,11 +11,12 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    musclegroup: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    //exercises
+    exercise: {
       type: DataTypes.STRING,
     },
     date_created: {
@@ -23,7 +24,8 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
+    //weeks
+    plan_weeks: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
@@ -40,7 +42,7 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'plan',
   }
 );
 
@@ -67,11 +69,7 @@ Workout.init({
             unique: false,
         },
 
-        duration: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            unique: false,
-        },
+        
 
         currentweek: {
             type: DataTypes.INTEGER,
@@ -91,12 +89,6 @@ Workout.init({
             allowNull: false,
             unique: false,
         },
-        //this will represent the total number of repetitions for a given exercise like pushups. This will come from an update query adding the current week's repetitions to the sum of all the previous weeks.
-        exercise1total: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            unique: false,
-        },
 
         exercise2: {
             type: DataTypes.STRING,
@@ -105,12 +97,6 @@ Workout.init({
         },
 
         exercise2current: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            unique: false,
-        },
-
-        exercise2total: {
             type: DataTypes.INTEGER,
             allowNull: false,
             unique: false,
@@ -128,12 +114,6 @@ Workout.init({
             unique: false,
         },
 
-        exercise3total: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            unique: false,
-        },
-
         exercise4: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -141,12 +121,6 @@ Workout.init({
         },
 
         exercise4current: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            unique: false,
-        },
-
-        exercise4total: {
             type: DataTypes.INTEGER,
             allowNull: false,
             unique: false,
@@ -163,12 +137,6 @@ Workout.init({
             allowNull: false,
             unique: false,
         },
-
-        exercise5total: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            unique: false,
-        }},
 
     {
     

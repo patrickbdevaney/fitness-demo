@@ -1,15 +1,15 @@
 const router = require('express').Router();
-const { Project } =require( '../../models');
-const withAuth =require ('../../utils/auth');
+const { Workout } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newPlan = await Project.create({
+    const newWorkout = await Workout.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newPlan);
+    res.status(200).json(newWorkout);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -17,19 +17,19 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const planData = await Project.destroy({
+    const workoutData = await Workout.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!planData) {
-      res.status(404).json({ message: 'No plan found with this id!' });
+    if (!workoutData) {
+      res.status(404).json({ message: 'No workout found with this id!' });
       return;
     }
 
-    res.status(200).json(planData);
+    res.status(200).json(workoutData);
   } catch (err) {
     res.status(500).json(err);
   }
